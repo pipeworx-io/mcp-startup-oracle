@@ -77,3 +77,13 @@ The gateway picks the right tool and fills the arguments automatically.
 ## License
 
 MIT
+
+## No MCP client? Call it over HTTP
+
+```bash
+curl -X POST https://gateway.pipeworx.io/v1/tools/startup_oracle_evaluate \
+  -H 'Content-Type: application/json' \
+  -d '{"idea":"An AI-powered platform that uses machine learning to optimize supply chain logistics for mid-market e-commerce businesses","have_you_talked_to_users":false,"is_it_uber_for":false,"vc_buzzword_count":4}'
+```
+
+No account needed for the first calls. Inspect any tool: `GET https://gateway.pipeworx.io/v1/tools/startup_oracle_evaluate`. Find one: `POST https://gateway.pipeworx.io/v1/tools/search_packs` with `{"query":"..."}`.
